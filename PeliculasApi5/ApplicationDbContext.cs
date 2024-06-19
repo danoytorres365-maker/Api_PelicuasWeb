@@ -5,21 +5,23 @@ namespace PeliculasApi5
 {
     public class ApplicationDbContext:DbContext
 
+
     {
 
-       /* public ApplicationDbContext()
+       
+
+
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
 
-        }*/
-
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        {
 
         }
 
-        
 
         public DbSet<Genero> Generos {get; set;}
+
+        public DbSet<Actor> Actores { get; set; }
     }
 }
 
